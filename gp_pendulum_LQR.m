@@ -16,7 +16,7 @@ u = [ 1.0 ];
 dt = 0.01;
 t  = 0.0;
 
-for i = 1 : 300000 
+for i = 1 : 30000 
 
   tp(i)   = t;
   yp(:,i) = x;
@@ -25,11 +25,11 @@ for i = 1 : 300000
   e = zeros(n,1);
   e(1) = x(1);
   e(2) = x(2);
-  [A,B] = aa_matrices_AB( "aa_rhs" , x , t , u , n , m );
+  [A,B] = gp_matrices_AB( "gp_rhs" , x , t , u , n , m );
   [K,P] = lqr_m( A , B , Q , R );
   u = -K * e;
 
-  x = aa_rk45( "aa_rhs" , x , t , dt , u );
+  x = gp_rk45( "gp_rhs" , x , t , dt , u );
 
   if  mod( i , 10 ) == 0 
     refresh;

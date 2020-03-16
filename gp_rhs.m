@@ -1,4 +1,4 @@
-function [ dx_dt ] = aa_rhs( x , t , u )
+function [ dx_dt ] = gp_rhs( x , t , u )
 
   dx_dt = zeros( size(x)(1) , 1 );
 

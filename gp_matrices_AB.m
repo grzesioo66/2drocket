@@ -1,4 +1,4 @@
-function [ A , B ] = aa_matrices_AB( RHS , x , t , u , n , m )
+function [ A , B ] = gp_matrices_AB( RHS , x , t , u , n , m )
 
 del = 1.0e-6;
 

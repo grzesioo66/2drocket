@@ -1,4 +1,4 @@
-function y = aa_rk45( RHS , x , t , dt, u )
+function y = gp_rk45( RHS , x , t , dt, u )
 
   y = zeros( size(x)(1) , 1 );
 
